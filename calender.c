@@ -100,31 +100,31 @@ void printCalendar(int year)
 
     int current = dayNum(1, 1, year);
 
-    for (int i = 0; i < 12; i++) {
-        days = numOfDays(i, year);
+    for (int m = 0; m < 12; m++) {
+        days = numOfDays(m, year);
 
         printf("\n ------------%s-------------\n",
-            getMonthName(i));
+            getMonthName(m));
 
-        printf("Sun  Mon  Tue  Wed  Thu  Fri  Sat\n");
+        printf("  Sun  Mon  Tue  Wed  Thu  Fri  Sat\n");
 
-        int k;
-        for (k = 0; k < current; k++)
+        int r;
+        for (r = 0; r < current; r++)
             printf("     ");
 
-        for (int j = 1; j <= days; j++) {
-            printf("%5d", j);
+        for (int n = 1; n <= days; n++) {
+            printf("%5d", n);
 
-            if (++k > 6) {
-                k = 0;
+            if (++r > 6) {
+                r = 0;
                 printf("\n");
             }
         }
 
-        if (k)
+        if (r)
             printf("\n");
 
-        current = k;
+        current = r;
     }
 
     return;
