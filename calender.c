@@ -98,7 +98,7 @@ void printCalendar(int year)
     printf("     Calendar - %d\n\n", year);
     int days;
 
-    int current = dayNumber(1, 1, year);
+    int current = dayNum(1, 1, year);
 
     for (int i = 0; i < 12; i++) {
         days = numOfDays(i, year);
